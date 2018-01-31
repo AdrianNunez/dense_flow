@@ -1,46 +1,26 @@
-Extracting dense flow field given a video.
+Modified tool to accept a folder with a sequence of images instead of a video and convert the sequence of images to optical flow images.
 
-#### Depencies:
+####Depencies:
 - LibZip: 
 to install on ubuntu ```apt-get install libzip-dev``` on mac ```brew install libzip```
 
-#### For OpenCV 3 Users
-Please see the [opencv-3.1](https://github.com/yjxiong/dense_flow/tree/opencv-3.1) branch. Many thanks to @victorhcm for the contributions!
-
-### Install
+###Install
 ```
 git clone --recursive http://github.com/yjxiong/dense_flow
 mkdir build && cd build
 cmake .. && make -j
 ```
 
-### Usage
-```
-./extract_gpu -f test.avi -x tmp/flow_x -y tmp/flow_y -i tmp/image -b 20 -t 1 -d 0 -s 1 -o dir
-```
-- `test.avi`: input video
-- `tmp`: folder containing RGB images and optical flow images
-- `dir`: output generated images to folder. if set to `zip`, will write images to zip files instead.
-
-### Warp Flow
-The warp optical flow is used in the following paper
+###Usage
+Instructions:
+* Create a 'build' folder to compile the project.
+* Use the generateOF.py script to automatically generate optical flow images.  Change the 'data_folder' and 'ouput_path' variables inside the script.
+* Alternative option from the terminal, use the following command:
 
 ```
-@inproceedings{TSN2016ECCV,
-  author    = {Limin Wang and
-               Yuanjun Xiong and
-               Zhe Wang and
-               Yu Qiao and
-               Dahua Lin and
-               Xiaoou Tang and
-               Luc {Van Gool}},
-  title     = {Temporal Segment Networks: Towards Good Practices for Deep Action Recognition},
-  booktitle   = {ECCV},
-  year      = {2016},
-}
+build/extract_cpu -f=video_folder -x=flow_x -y=flow_y -i=tmp/image -b=20 -t=1 -d=0 -s=1 -o=dir
 ```
+- `video_folder`: path to the folder where the image sequence is stored (image sequence extracted from a video).
+- `flow_x`: path to the folder where the the horizontal components of the optical flow will be saved.
+- `flow_y`: path to the folder where the the vertical components of the optical flow will be saved. Can be the same as the previous one to put everything inside the same folder.
 
-To extract warp flow, use the command
-```
-./extract_warp_gpu -f test.avi -x tmp/flow_x -y tmp/flow_y -i tmp/image -b 20 -t 1 -d 0 -s 1 -o dir
-```

@@ -42,8 +42,8 @@ target_link_libraries(pydenseflow
 add_executable( extract_cpu tools/extract_flow.cpp)
 target_link_libraries( extract_cpu ${OpenCV_LIBS} ${LIBZIP_LIBRARY} denseflow)
 
-add_executable( extract_gpu tools/extract_flow_gpu.cpp)
-target_link_libraries( extract_gpu ${OpenCV_LIBS} ${LIBZIP_LIBRARY} denseflow)
+#add_executable( extract_gpu tools/extract_flow_gpu.cpp)
+#target_link_libraries( extract_gpu ${OpenCV_LIBS} ${LIBZIP_LIBRARY} denseflow)
 
-add_executable( extract_warp_gpu tools/extract_warp_flow_gpu.cpp)
-target_link_libraries( extract_warp_gpu ${OpenCV_LIBS} ${LIBZIP_LIBRARY} denseflow)
+#add_executable( extract_warp_gpu tools/extract_warp_flow_gpu.cpp)
+#target_link_libraries( extract_warp_gpu ${OpenCV_LIBS} ${LIBZIP_LIBRARY} denseflow)
