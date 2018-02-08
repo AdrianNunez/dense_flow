@@ -1,0 +1,8 @@
+2018-02-08 10:36:34,387 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGSEGV] signal
+2018-02-08 10:36:34,387 WARN  [default] Aborting application. Reason: Fatal log at [/home/adrian/project/dense_flow/include/easylogging++/src/easylogging++.h:5585]
+2018-02-08 10:46:00,537 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGSEGV] signal
+2018-02-08 10:46:00,537 WARN  [default] Aborting application. Reason: Fatal log at [/home/adrian/project/dense_flow/include/easylogging++/src/easylogging++.h:5585]
+2018-02-08 10:59:53,322 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGSEGV] signal
+2018-02-08 10:59:53,323 WARN  [default] Aborting application. Reason: Fatal log at [/home/adrian/project/dense_flow/include/easylogging++/src/easylogging++.h:5585]
+2018-02-08 11:05:41,994 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGSEGV] signal
+2018-02-08 11:05:41,994 WARN  [default] Aborting application. Reason: Fatal log at [/home/adrian/project/dense_flow/include/easylogging++/src/easylogging++.h:5585]

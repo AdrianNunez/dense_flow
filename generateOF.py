@@ -3,8 +3,8 @@ import cv2
 import glob
 import sys
 
-data_folder = 'dataset'
-output_path = 'output'
+data_folder = '/home/adrian/Downloads/prueba/'
+output_path = '/home/adrian/Downloads/prueba_of/'
 use_video = True
 
 if not os.path.exists(output_path):
@@ -20,4 +20,5 @@ for folder in folders:
 		flow = output_path + folder + '/' + video_folder
 		if not os.path.exists(flow):
 			os.makedirs(flow)
+      
 		os.system('build/extract_cpu -f={} -x={} -y={} -i=tmp/image -b=20 -t=1 -d=0 -s=1 -o=dir'.format(path, flow + '/flow_x', flow + '/flow_y'))
