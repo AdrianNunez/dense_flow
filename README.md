@@ -8,7 +8,7 @@ to install on ubuntu ```apt-get install libzip-dev``` on mac ```brew install lib
 #### Install
 
 ```
-git clone https://github.com/AdrianNunez/dense_flow.git
+git clone --recursive https://github.com/AdrianNunez/dense_flow.git
 mkdir build && cd build
 cmake .. && make -j
 ```
