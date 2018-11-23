@@ -1,4 +1,4 @@
-Modified tool to accept a folder with a sequence of images instead of a video and convert the sequence of images to optical flow images.
+Modified tool to accept a folder with a sequence of images instead of a video and convert the sequence of images to optical flow images. Only CPU version is adapted, GPU version cannot be used for images.
 
 #### Depencies
 
